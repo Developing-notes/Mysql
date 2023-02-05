@@ -1,0 +1,39 @@
+mysql
+
+1.inner join     
+
+conditon = 1=2
+two or more  table common only get   =>mongodb project concept 
+eg:id another userid same only get 
+
+SELECT users.id, users.name , users.age ,userdetails.id, userdetails.address ,userdetails.process
+FROM users users 
+INNER JOIN userdetails userdetails
+ON users.id=userdetails.id
+
+
+2.left join
+
+condition =1=>2
+left table OR first table (call name)
+
+eg:first table id match to second table all data get If any data null also get  
+
+SELECT users.id,users.name,users.age,userdetails.id 
+FROM users users
+LEFT JOIN userdetails userdetails 
+ON users.id =userdetails.id
+
+3.right join
+
+condition =1<=2
+right table OR second table (call name)  
+
+eg:second table id match to first table all data get If any data null also get  
+
+SELECT users.id,users.name,users.age,userdetails.id 
+FROM users users
+RIGHT JOIN userdetails userdetails 
+ON users.id =userdetails.id
+
+4.
