@@ -1,0 +1,11 @@
+const pets = [
+  { id: 1, name: 'Fluffy', type: 'cat' },
+  { id: 2, name: 'Fetch', type: 'dog' },
+  { id: 3, name: 'Scratch', type: 'cat' }
+];
+
+const values = pets.map(pet => `(${pet.id}, '${pet.name}', '${pet.type}')`).join(', ');
+
+const sql = `INSERT INTO pets (id, name, type) VALUES ${values}`;
+
+// execute the SQL statement
