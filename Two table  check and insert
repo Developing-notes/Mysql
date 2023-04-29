@@ -1,1 +1,4 @@
 INSERT INTO table2 (column1, column2, column3) SELECT columnA AS column1, columnB AS column2, columnC AS column3 FROM table1 WHERE NOT EXISTS ( SELECT 1 FROM table2 WHERE table1.columnA = table2.column1 AND table1.columnB = table2.column2 AND table1.columnC = table2.column3 )
+
+
+https://stackoverflow.com/questions/16753122/sql-how-to-replace-values-of-select-return
