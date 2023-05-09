@@ -1,0 +1,17 @@
+https://stackoverflow.com/questions/67929710/salah son
+
+https://stackoverflow.com/questions/68362191/extract-data-from-multiple-objects-in-json-variable-in-sql
+https://stackoverflow.com/questions/41171636/san
+
+SELECT JSON_EXTRACT(json_column, '$.key') AS key, SUM(JSON_EXTRACT(json_column, '$.amount')) AS total_amount FROM my_table GROUP BY key;
+SELECT jsonb_object_keys(data) FROM my_table;
+SELECT DISTINCT [key] FROM my_table CROSS APPLY OPENJSON(data);
+
+SELECT 
+  JSON_OBJECT_KEYS(json_data) AS key, 
+  SUM(CAST(JSON_EXTRACT(json_data, CONCAT('$.', key)) AS DECIMAL(10,2))) AS total
+FROM 
+  table_name
+GROUP BY 
+  key;
+
